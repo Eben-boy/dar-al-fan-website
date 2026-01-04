@@ -1,274 +1,266 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dar Al Fan - Artisanat Marocain</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary: #C65D3B;
-            --secondary: #3A7CA5;
-            --accent: #E8C547;
-            --dark: #2C2C2C;
-            --light: #F5F5F5;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background: var(--light);
-        }
-        header {
-            background: var(--dark);
-            color: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        nav { display: flex; gap: 30px; }
-        nav a {
-            text-decoration: none;
-            color: white;
-            transition: color 0.3s;
-        }
-        nav a:hover { color: var(--primary); }
-        .cart-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .cart-btn:hover { background: #B84C2A; }
-        .hero {
-            background: linear-gradient(135deg, rgba(198, 93, 59, 0.8), rgba(58, 124, 165, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23E8C547" width="1200" height="600"/></svg>');
-            background-size: cover;
-            padding: 100px 20px;
-            text-align: center;
-            color: white;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-        }
-        .hero-content h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            text-align: left;
-        }
-        .hero-content p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            text-align: left;
-        }
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 30px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: inline-block;
-            text-decoration: none;
-        }
-        .btn-primary:hover {
-            background: #B84C2A;
-            transform: translateY(-3px);
-        }
-        .hero-image {
-            text-align: center;
-        }
-        .hero-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        h1 { margin: 40px 0 30px; text-align: center; }
-        .products-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        .product-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-        .product-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-        .product-info {
-            padding: 20px;
-        }
-        .product-name {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-        .product-desc {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 15px;
-            min-height: 60px;
-        }
-        .product-price {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        .product-btn {
-            width: 100%;
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .product-btn:hover { background: #B84C2A; }
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 40px;
-        }
-        footer p { margin-bottom: 10px; }
-        @media (max-width: 768px) {
-            .hero { grid-template-columns: 1fr; }
-            .hero-content h2 { font-size: 32px; }
-            nav { gap: 15px; }
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Dar Al Fan - Artisanat Marocain</title>
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ :root {
+ --primary: #C65D3B;
+ --secondary: #3A7CA5;
+ --accent: #E8C547;
+ --dark: #2C2C2C;
+ --light: #F5F5F5;
+ }
+ body {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ line-height: 1.6;
+ color: var(--dark);
+ background: var(--light);
+ }
+ header {
+ background: var(--dark);
+ color: white;
+ padding: 20px 0;
+ box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+ }
+ .header-content {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo {
+ font-size: 24px;
+ font-weight: bold;
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ }
+ nav { display: flex; gap: 30px; }
+ nav a {
+ text-decoration: none;
+ color: white;
+ transition: color 0.3s;
+ }
+ nav a:hover { color: var(--primary); }
+ .cart-btn {
+ background: var(--primary);
+ color: white;
+ border: none;
+ padding: 10px 20px;
+ border-radius: 25px;
+ cursor: pointer;
+ transition: background 0.3s;
+ }
+ .cart-btn:hover { background: #B84C2A; }
+ .hero {
+ background: linear-gradient(135deg, rgba(198, 93, 59, 0.8), rgba(58, 124, 165, 0.8));
+ background-size: cover;
+ padding: 100px 20px;
+ text-align: center;
+ color: white;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ align-items: center;
+ }
+ .hero-content h2 {
+ font-size: 48px;
+ margin-bottom: 20px;
+ text-align: left;
+ }
+ .hero-content p {
+ font-size: 18px;
+ margin-bottom: 30px;
+ text-align: left;
+ }
+ .btn-primary {
+ background: var(--primary);
+ color: white;
+ padding: 15px 40px;
+ border: none;
+ border-radius: 30px;
+ font-size: 16px;
+ cursor: pointer;
+ transition: all 0.3s;
+ display: inline-block;
+ text-decoration: none;
+ }
+ .btn-primary:hover {
+ background: #B84C2A;
+ transform: translateY(-3px);
+ }
+ .hero-image {
+ text-align: center;
+ }
+ .hero-image img {
+ max-width: 100%;
+ height: auto;
+ border-radius: 10px;
+ }
+ main {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 40px 20px;
+ }
+ h1 { margin: 40px 0 30px; text-align: center; }
+ .products-container {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 30px;
+ margin-bottom: 40px;
+ }
+ .product-card {
+ background: white;
+ border-radius: 10px;
+ overflow: hidden;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+ transition: transform 0.3s, box-shadow 0.3s;
+ }
+ .product-card:hover {
+ transform: translateY(-10px);
+ box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+ }
+ .product-image {
+ width: 100%;
+ height: 250px;
+ object-fit: cover;
+ display: block;
+ }
+ .product-info {
+ padding: 20px;
+ }
+ .product-name {
+ font-size: 18px;
+ font-weight: bold;
+ margin-bottom: 10px;
+ color: var(--dark);
+ }
+ .product-desc {
+ font-size: 14px;
+ color: #666;
+ margin-bottom: 15px;
+ min-height: 60px;
+ }
+ .product-price {
+ font-size: 24px;
+ font-weight: bold;
+ color: var(--primary);
+ margin-bottom: 15px;
+ }
+ .product-btn {
+ width: 100%;
+ background: var(--primary);
+ color: white;
+ border: none;
+ padding: 12px;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: background 0.3s;
+ }
+ .product-btn:hover { background: #B84C2A; }
+ footer {
+ background: var(--dark);
+ color: white;
+ text-align: center;
+ padding: 30px 20px;
+ margin-top: 40px;
+ }
+ footer p { margin-bottom: 10px; }
+ @media (max-width: 768px) {
+ .hero { grid-template-columns: 1fr; }
+ .hero-content h2 { font-size: 32px; }
+ nav { gap: 15px; }
+ }
+ </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo">🏺 Dar Al Fan</div>
-            <nav>
-                <a href="#accueil">Accueil</a>
-                <a href="#produits">Produits</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <button class="cart-btn">🛒 Panier</button>
-        </div>
-    </header>
-
-    <section id="accueil" class="hero">
-        <div class="hero-content">
-            <h2>Plongez au cœur de l'artisanat marocain</h2>
-            <p>Découvrez nos créations authentiques façonnées par les mains habiles de nos artisans</p>
-            <button class="btn-primary" onclick="document.getElementById('produits').scrollIntoView()">Découvrir nos produits</button>
-        </div>
-        <div class="hero-image">
-            <img src="./images/hero-zellige.jpg.jfif" alt="Zellige marocain" style="border-radius: 10px;">
-        </div>
-    </section>
-
-    <main>
-        <h1 id="produits">Nos Créations Artisanales</h1>
-        <div class="products-container">
-            <div class="product-card">
-                <img src="./images/zellige-decoratif.jpg.jfif" alt="Zellige décoratif" class="product-image">
-                <div class="product-info">
-                    <div class="product-name">Zellige décoratif Marocains</div>
-                    <div class="product-desc">Zellige authentique façonné à la main selon un savoir-faire traditionnel marocain. Chaque pièce est unique.</div>
-                    <div class="product-price">300 DH</div>
-                    <button class="product-btn">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="./images/bijoux-traditionnel.jpg.jfif" alt="Bijoux" class="product-image">
-                <div class="product-info">
-                    <div class="product-name">Bijoux traditionnel marocain</div>
-                    <div class="product-desc">Bijoux authentiques inspirés par la richesse de l'héritage marocain. Fabriqués par des artisans passionnés.</div>
-                    <div class="product-price">130 DH</div>
-                    <button class="product-btn">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="./images/miroir-artisanat.jpg.jfif" alt="Miroir" class="product-image">
-                <div class="product-info">
-                    <div class="product-name">Miroir artisanat marocain</div>
-                    <div class="product-desc">Miroir artisanal en cadre zellige traditionnel marocain. Chaque miroir est une œuvre d'art unique.</div>
-                    <div class="product-price">1000 DH</div>
-                    <button class="product-btn">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="./images/plateau-zellige.jpg.jfif" alt="Plateau" class="product-image">
-                <div class="product-info">
-                    <div class="product-name">Plateau en table de zellige marocain</div>
-                    <div class="product-desc">Plateau décoratif en table zellige artisanal marocain. Surface utile pour accueillir thé et pâtisseries.</div>
-                    <div class="product-price">250 DH</div>
-                    <button class="product-btn">Ajouter au panier</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="./images/porte-cles-marocain.jpg.jfif" alt="Porte-clés" class="product-image">
-                <div class="product-info">
-                    <div class="product-name">Porte de clés marocain</div>
-                    <div class="product-desc">Porte-clés décoratif inspiré par l'artisanat traditionnel marocain. Pratique et esthétique.</div>
-                    <div class="product-price">30 DH</div>
-                    <button class="product-btn">Ajouter au panier</button>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer id="contact">
-        <h3>🏺 Dar Al Fan - Artisanat Marocain Authentique</h3>
-        <p>Laayoune, Sahara Marocain</p>
-        <p>📧 info@daralfan.com | 📞 +212 5XX XXX XXX</p>
-        <p>© 2024 Dar Al Fan. Tous droits réservés.</p>
-    </footer>
-
-    <script>
-        document.querySelectorAll('.product-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                alert('Produit ajouté au panier!');
-            });
-        });
-    </script>
+ <header>
+ <div class="header-content">
+ <div class="logo">🏺 Dar Al Fan</div>
+ <nav>
+ <a href="#accueil">Accueil</a>
+ <a href="#produits">Produits</a>
+ <a href="#contact">Contact</a>
+ </nav>
+ <button class="cart-btn">🛒 Panier</button>
+ </div>
+ </header>
+ <section id="accueil" class="hero">
+ <div class="hero-content">
+ <h2>Plongez au cœur de l'artisanat marocain</h2>
+ <p>Découvrez nos créations authentiques façonnées par les mains habiles de nos artisans</p>
+ <button class="btn-primary" onclick="document.getElementById('produits').scrollIntoView()">Découvrir nos produits</button>
+ </div>
+ <div class="hero-image">
+ <img src="./images/hero-zellige.jpg.jfif" alt="Zellige marocain" style="border-radius: 10px;">
+ </div>
+ </section>
+ <main>
+ <h1 id="produits">Nos Créations Artisanales</h1>
+ <div class="products-container">
+ <div class="product-card">
+ <img src="./images/zellige-decoratif.jpg.jfif" alt="Zellige décoratif" class="product-image">
+ <div class="product-info">
+ <div class="product-name">Zellige décoratif</div>
+ <div class="product-desc">Zellige authentique façonné à la main selon un savoir-faire traditionnel marocain. Chaque pièce est unique.</div>
+ <div class="product-price">300 DH</div>
+ <button class="product-btn">Ajouter au panier</button>
+ </div>
+ </div>
+ <div class="product-card">
+ <img src="./images/bijoux-traditionnel.jpg.jfif" alt="Bijoux" class="product-image">
+ <div class="product-info">
+ <div class="product-name">Bijoux traditionnel marocain</div>
+ <div class="product-desc">Bijoux authentiques inspirés par la richesse de l'héritage marocain. Fabriqués par des artisans passionnés.</div>
+ <div class="product-price">130 DH</div>
+ <button class="product-btn">Ajouter au panier</button>
+ </div>
+ </div>
+ <div class="product-card">
+ <img src="./images/miroir-artisanat.jpg.jfif" alt="Miroir" class="product-image">
+ <div class="product-info">
+ <div class="product-name">Miroir artisanat marocain</div>
+ <div class="product-desc">Miroir artisanal en cadre zellige traditionnel marocain. Chaque miroir est une œuvre d'art unique.</div>
+ <div class="product-price">1000 DH</div>
+ <button class="product-btn">Ajouter au panier</button>
+ </div>
+ </div>
+ <div class="product-card">
+ <img src="./images/plateau-zellige.jpg.jfif" alt="Plateau" class="product-image">
+ <div class="product-info">
+ <div class="product-name">Plateau en table de zellige marocain</div>
+ <div class="product-desc">Plateau décoratif en table zellige artisanal marocain. Surface utile pour accueillir thé et pâtisseries.</div>
+ <div class="product-price">250 DH</div>
+ <button class="product-btn">Ajouter au panier</button>
+ </div>
+ </div>
+ <div class="product-card">
+ <img src="./images/porte-cles-marocain.jpg.jfif" alt="Porte-clés" class="product-image">
+ <div class="product-info">
+ <div class="product-name">Porte de clés marocain</div>
+ <div class="product-desc">Porte-clés décoratif inspiré par l'artisanat traditionnel marocain. Pratique et esthétique.</div>
+ <div class="product-price">30 DH</div>
+ <button class="product-btn">Ajouter au panier</button>
+ </div>
+ </div>
+ </div>
+ </main>
+ <footer id="contact">
+ <h3>🏺 Dar Al Fan - Artisanat Marocain Authentique</h3>
+ <p>Laayoune, Sahara Marocain</p>
+ <p>📧 info@daralfan.com | 📞 +212 5XX XXX XXX</p>
+ <p>© 2024 Dar Al Fan. Tous droits réservés.</p>
+ </footer>
+ <script>
+ document.querySelectorAll('.product-btn').forEach(btn => {
+ btn.addEventListener('click', function() {
+ alert('Produit ajouté au panier!');
+ });
+ });
+ </script>
 </body>
 </html>
