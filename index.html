@@ -13,162 +13,267 @@
             --dark: #2C2C2C;
             --light: #F5F5F5;
         }
-        body { font-family: 'Segoe UI', sans-serif; color: var(--dark); background: white; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { background: var(--dark); color: white; padding: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        .navbar { display: flex; justify-content: space-between; align-items: center; }
-        .logo h1 { font-size: 28px; margin-bottom: 5px; }
-        .nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
-        .nav-links a { color: white; font-weight: 500; padding: 8px 12px; border-radius: 4px; transition: 0.3s; }
-        .nav-links a:hover { background: var(--primary); }
-        .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding: 80px 0; }
-        .hero h2 { font-size: 48px; margin-bottom: 20px; color: var(--dark); line-height: 1.2; }
-        .hero p { font-size: 18px; color: #666; margin-bottom: 30px; }
-        .hero-image img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
-        .btn-primary { background: linear-gradient(135deg, var(--primary) 0%, #b84a2f 100%); color: white; padding: 14px 30px; border: none; border-radius: 50px; font-size: 16px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 15px rgba(198, 93, 59, 0.3); transition: 0.3s; }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(198, 93, 59, 0.4); }
-        .produits { padding: 80px 0; background: var(--light); }
-        .section-title { font-size: 42px; text-align: center; margin-bottom: 50px; color: var(--dark); }
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
-        .product-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: 0.3s; }
-        .product-card:hover { transform: translateY(-8px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-        .product-image { width: 100%; height: 250px; object-fit: cover; background: var(--light); }
-        .product-info { padding: 20px; }
-        .product-name { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
-        .product-description { font-size: 13px; color: #666; margin-bottom: 15px; }
-        .product-price { font-size: 24px; font-weight: bold; color: var(--primary); margin-bottom: 15px; }
-        footer { background: var(--dark); color: white; padding: 40px 0; text-align: center; margin-top: 50px; }
-        .loading { text-align: center; padding: 40px; font-size: 18px; color: #666; }
-        .error { text-align: center; padding: 40px; font-size: 16px; color: #d9534f; background: #f2dede; border-radius: 4px; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        nav { display: flex; gap: 30px; }
+        nav a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--primary); }
+        .cart-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .cart-btn:hover { background: #B84C2A; }
+        .hero {
+            background: linear-gradient(135deg, rgba(198, 93, 59, 0.8), rgba(58, 124, 165, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23E8C547" width="1200" height="600"/></svg>');
+            background-size: cover;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+        .hero-content h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .btn-primary:hover {
+            background: #B84C2A;
+            transform: translateY(-3px);
+        }
+        .hero-image {
+            text-align: center;
+        }
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 { margin: 40px 0 30px; text-align: center; }
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: white;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        .product-desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            min-height: 60px;
+        }
+        .product-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        .product-btn {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .product-btn:hover { background: #B84C2A; }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        footer p { margin-bottom: 10px; }
         @media (max-width: 768px) {
             .hero { grid-template-columns: 1fr; }
-            .nav-links { gap: 15px; font-size: 14px; }
-            .hero h2 { font-size: 32px; }
-            .products-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero-content h2 { font-size: 32px; }
+            nav { gap: 15px; }
         }
     </style>
 </head>
 <body>
-    <!-- HEADER -->
     <header>
-        <nav class="navbar">
-            <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                <div class="logo">
-                    <h1>🏺 Dar Al Fan</h1>
-                    <p style="font-size: 12px; opacity: 0.8;">Artisanat Marocain Authentique</p>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#produits">Produits</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#" style="background: var(--primary) !important; padding: 10px 15px !important; border-radius: 20px !important;">🛒 Panier</a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="header-content">
+            <div class="logo">🏺 Dar Al Fan</div>
+            <nav>
+                <a href="#accueil">Accueil</a>
+                <a href="#produits">Produits</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="cart-btn">🛒 Panier</button>
+        </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; width: 100%; padding: 80px 0;">
-            <div class="hero-content">
-                <h2>Plongez au cœur de l'artisanat marocain</h2>
-                <p>Découvrez nos créations authentiques façonnées par les mains habiles de nos artisans</p>
-                <button class="btn-primary" onclick="document.getElementById('produits').scrollIntoView({behavior: 'smooth'})">Découvrir nos produits</button>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1609039468184-07ca26a7d0c9?w=500&h=500&fit=crop" alt="Zellige marocain">
-            </div>
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h2>Plongez au cœur de l'artisanat marocain</h2>
+            <p>Découvrez nos créations authentiques façonnées par les mains habiles de nos artisans</p>
+            <button class="btn-primary" onclick="document.getElementById('produits').scrollIntoView()">Découvrir nos produits</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/400x300/E8C547/2C2C2C?text=Zellige+Marocain" alt="Zellige marocain" style="border-radius: 10px;">
         </div>
     </section>
 
-    <!-- PRODUITS -->
-    <section class="produits" id="produits">
-        <div class="container">
-            <h2 class="section-title">Nos Créations Artisanales</h2>
-            <div class="products-grid" id="products-grid">
-                <div class="loading">Chargement des produits...</div>
+    <main>
+        <h1 id="produits">Nos Créations Artisanales</h1>
+        <div class="products-container">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x250/C65D3B/FFFFFF?text=Zellige+D%C3%A9coratif" alt="Zellige décoratif" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Zellige décoratif Marocains</div>
+                    <div class="product-desc">Zellige authentique façonné à la main selon un savoir-faire traditionnel marocain. Chaque pièce est unique.</div>
+                    <div class="product-price">300 DH</div>
+                    <button class="product-btn">Ajouter au panier</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x250/3A7CA5/FFFFFF?text=Bijoux+Traditionnel" alt="Bijoux" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Bijoux traditionnel marocain</div>
+                    <div class="product-desc">Bijoux authentiques inspirés par la richesse de l'héritage marocain. Fabriqués par des artisans passionés.</div>
+                    <div class="product-price">130 DH</div>
+                    <button class="product-btn">Ajouter au panier</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x250/E8C547/2C2C2C?text=Miroir+Artisanat" alt="Miroir" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Miroir artisanat marocain</div>
+                    <div class="product-desc">Miroir artisanal en cadre zellige traditionnel marocain. Chaque miroir est une œuvre d'art unique.</div>
+                    <div class="product-price">1000 DH</div>
+                    <button class="product-btn">Ajouter au panier</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x250/C65D3B/FFFFFF?text=Plateau+Zellige" alt="Plateau" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Plateau en table de zellige marocain</div>
+                    <div class="product-desc">Plateau décoratif en table zellige artisanal marocain. Surface utile pour accueillir thé et pâtisseries.</div>
+                    <div class="product-price">250 DH</div>
+                    <button class="product-btn">Ajouter au panier</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x250/3A7CA5/FFFFFF?text=Porte+Cl%C3%A9s" alt="Porte-clés" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Porte de clés marocain</div>
+                    <div class="product-desc">Porte-clés décoratif inspiré par l'artisanat traditionnel marocain. Pratique et esthétique.</div>
+                    <div class="product-price">30 DH</div>
+                    <button class="product-btn">Ajouter au panier</button>
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <h3>🏺 Dar Al Fan - Artisanat Marocain Authentique</h3>
-            <p style="margin-top: 10px; opacity: 0.8;">El Aaiún, Sahara Marocain | 📧 info@daralfan.com | 📞 +212 5XX XXX XXX</p>
-            <p style="margin-top: 20px; opacity: 0.6;">&copy; 2024 Dar Al Fan. Tous droits réservés.</p>
-        </div>
+    <footer id="contact">
+        <h3>🏺 Dar Al Fan - Artisanat Marocain Authentique</h3>
+        <p>El Aaiún, Sahara Marocain</p>
+        <p>📧 info@daralfan.com | 📞 +212 5XX XXX XXX</p>
+        <p>© 2024 Dar Al Fan. Tous droits réservés.</p>
     </footer>
 
     <script>
-        const ODOO_URL = 'https://dar-al-fan1.odoo.com';
-        const products = [
-            {
-                id: 3,
-                name: 'Zellige décoratif Marocains',
-                price: 300,
-                description: 'Zellige authentique façonné à la main selon un savoir-faire traditionnel marocain. Chaque pièce est unique.',
-                image: 'https://images.unsplash.com/photo-1578479644300-2a7fe9c4fcff?w=400&h=400&fit=crop'
-            },
-            {
-                id: 7,
-                name: 'bijoux traditionnel marocain',
-                price: 130,
-                description: 'Bijoux authentiques inspirés par la richesse de l\'héritage marocain. Fabriqués par des artisans passionés.',
-                image: 'https://images.unsplash.com/photo-1522293182086-7651a899d37f?w=400&h=400&fit=crop'
-            },
-            {
-                id: 4,
-                name: 'miroir artisanat marocain',
-                price: 1000,
-                description: 'Miroir artisanal en cadre zellige traditionnel marocain. Chaque miroir est une œuvre d\'art unique.',
-                image: 'https://images.unsplash.com/photo-1578926078328-123c5e67c2ba?w=400&h=400&fit=crop'
-            },
-            {
-                id: 5,
-                name: 'plateau en table de zellige marocain',
-                price: 250,
-                description: 'Plateau décoratif en table zellige artisanal marocain. Surface utile pour accueillir thé et pâtisseries.',
-                image: 'https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=400&h=400&fit=crop'
-            },
-            {
-                id: 6,
-                name: 'porte de clés marocain',
-                price: 30,
-                description: 'Porte-clés décoratif inspiré par l\'artisanat traditionnel marocain. Pratique et esthétique.',
-                image: 'https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=400&h=400&fit=crop'
-            }
-        ];
-
-        function displayProducts() {
-            const grid = document.getElementById('products-grid');
-            grid.innerHTML = '';
-            
-            products.forEach(product => {
-                const card = document.createElement('div');
-                card.className = 'product-card';
-                card.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-name">${product.name}</h3>
-                        <p class="product-description">${product.description}</p>
-                        <p class="product-price">${product.price} DH</p>
-                        <button class="btn-primary" style="width: 100%; padding: 10px;" onclick="addToCart(${product.id}, '${product.name}', ${product.price})">Ajouter au panier</button>
-                    </div>
-                `;
-                grid.appendChild(card);
+        document.querySelectorAll('.product-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                alert('Produit ajouté au panier!');
             });
-        }
-
-        function addToCart(id, name, price) {
-            let cart = JSON.parse(localStorage.getItem('cart') || '[]');
-            cart.push({id, name, price});
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert(`${name} ajouté au panier!`);
-        }
-
-        // Charger les produits au démarrage
-        window.addEventListener('DOMContentLoaded', displayProducts);
+        });
     </script>
 </body>
 </html>
